@@ -44,5 +44,5 @@ Users should be able to:
 ## Author
 
 - Website - https://new-portfolio-flax-five.vercel.app
-- Frontend Mentor - @profile/Layomi1
+- Frontend Mentor - @Layomi1
 - Twitter - @iamlayomi1
