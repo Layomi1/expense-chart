@@ -5,21 +5,23 @@ async function getData() {
     const response = await fetch("./data.json");
     const data = await response.json();
 
+    const currentDay = new Intl.DateTimeFormat("en-US", {
+      weekday: "short",
+    }).format(Date.now());
+
+    const maxAmount = Math.max(...data.map((element) => element.amount));
     data.forEach((element) => {
       const bar = document.createElement("article");
       bar.classList.add("bar");
 
-      bar.style.height = `${element.amount}%`;
+      const barHeight = (element.amount / maxAmount) * 100;
 
-      const currentDay = new Intl.DateTimeFormat("en-US", {
-        weekday: "short",
-      }).format(Date.now());
-
-      if (element.day == currentDay.toLocaleLowerCase()) {
+      if (element.day === currentDay.toLocaleLowerCase()) {
         bar.style.backgroundColor = "#87bec4";
       }
+      bar.style.height = `${barHeight}%`;
 
-      bar.innerHTML = `<span id='day'> ${element.day}
+      bar.innerHTML = `<span> ${element.day}
       </span>`;
 
       const tooltip = document.createElement("p");
