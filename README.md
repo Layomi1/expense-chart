@@ -43,6 +43,6 @@ Users should be able to:
 
 ## Author
 
-- Website - [Add your name here](https://expense-chart-rouge-six.vercel.app/)
-- Frontend Mentor - [@](https://www.frontendmentor.io/profile/Layomi1)
-- Twitter - [@yourusername](https://www.twitter.com/iamlayomi1)
+- Website - https://new-portfolio-flax-five.vercel.app
+- Frontend Mentor - @profile/Layomi1
+- Twitter - @iamlayomi1
